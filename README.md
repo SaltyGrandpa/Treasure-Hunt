@@ -13,4 +13,4 @@ Users in hunt mode will be able to see all of the uploaded scenes in their area 
 - Unity3D 5, 64-bit
 - Qualcomm Vuforia
 - LAMP Stack Web Server
-- MiniJSON Library for Unity3D
+- [MiniJSON](https://gist.github.com/darktable/1411710) Library for Unity3D
