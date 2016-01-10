@@ -8,11 +8,6 @@
 		
 		
 		try {
-		/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-		/*  Selection of points within specified radius of given lat/lon      (c) Chris Veness 2008-2014  */
-		/*  Originally found at: http://www.movable-type.co.uk/scripts/latlong-db.html                    */
-		/*  Modifications to use milage and adapt to database design by Corey McCown                      */
-		/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 			//Begin database connection
 			//Connect using my shared credentials file
 			//Database hosted locally, database name is 'SeniorProject'
