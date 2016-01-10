@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TESTING</title>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+    
+    function showPosition(position) {
+		$('#lon1').val(position.coords.longitude);
+		$('#lon2').val(position.coords.longitude);
+		$('#lat1').val(position.coords.latitude);
+        $('#lat2').val(position.coords.latitude);
+    }
+	$(document).ready(function(){
+		getLocation();
+	});
+    </script>
+</head>
+
+<body>
+
+    <h1>PostLevel.php</h1>
+    <form action="postlevel.php" method="post">
+        Level Name: <input type="text" name="level_name"><br />
+        Level Desc: <input type="text" name="level_desc"><br />
+        Level Data: <input type="text" name="level_data"><br />
+        Longitude : <input type="text" name="longitude" id="lon1"><br />
+        Latitude  : <input type="text" name="latitude" id="lat1"><br />
+        <input type="submit" value="Submit"><br />
+    </form>
+    <h1>GetLevel.php</h1>
+    <form action="getlevel.php" method="post">
+        Longitude : <input type="text" name="longitude" id="lon2"><br />
+        Latitude  : <input type="text" name="latitude" id="lat2"><br />
+        Radius (m): <input type="text" name="radius" value="5"><br />
+        <input type="submit" value="Submit"><br />
+    </form>
+    <h1>GetLevelData.php</h1>
+    <form action="getleveldata.php" method="post">
+         Level ID : <input type="text" name="id"><br />
+        <input type="submit" value="Submit"><br />
+    </form>
+    <h1>PostVote.php <em>(vote_up = true)</em></h1>
+    <form action="postvote.php" method="post">
+        Level ID : <input type="text" name="level_id"><br />
+        <input type="hidden" name="vote_up" value="true"><br />
+        <input type="submit" value="Submit"><br />
+    </form>
+    <h1>PostVote.php <em>(vote_up = false)</em></h1>
+    <form action="postvote.php" method="post">
+         Level ID : <input type="text" name="level_id"><br />
+        <input type="hidden" name="vote_up" value="false"><br />
+        <input type="submit" value="Submit"><br />
+    </form>
+</body>
+</html>
